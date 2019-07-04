@@ -201,4 +201,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # My bindings
 bindsym $mod+c exec google-chrome-stable
+bindsym $mod+Shift+s exec gnome-screenshot
+bindsym $mod+Shift+a exec gnome-screenshot -a
 
