@@ -173,7 +173,7 @@ bindsym $mod+r mode "resize"
 
 for_window [class=".*"] border pixel 0
 
-gaps inner 30
+gaps inner 35
 # exec --no-startup-id "xrandr --output eDP1 --mode 2560x1440"
 # exec --no-startup-id nitrogen --restore
 exec_always --no-startup-id $HOME/.config/i3/launch.sh
