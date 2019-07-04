@@ -2,8 +2,12 @@
 
 set -e
 
+cd ~/Code/Personal/configs
+
 cp -r ~/.config/cava .config/
 cp -r ~/.config/polybar .config/
 cp -r ~/.config/i3 .config/
 cp -r ~/.config/compton .config/
+
+echo "Configs backed up, be sure to commit and push"
 
