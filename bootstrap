@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo pacman -Syy --noconfirm
+sudo pacman -Syu --noconfirm
+sudo pacman -S base-devel --noconfirm
+sudo pacman -S pacaur --noconfirm
+
+./setup/001-base.sh
