@@ -51,16 +51,15 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-font-3 = FontAwesome:pixelsize=14;0
+font-0 = DejaVuSans:pixelsize=10;1
+font-1 = siji:pixelsize=10;1
+font-2 = FontAwesome:pixelsize=14;0
 
 modules-left = i3
 # modules-center = mpd
 modules-center = spotify
-modules-right = xbacklight alsa pulseaudio wlan battery temperature date powermenu
-# bspwm filesystem xkeyboard cpu eth memory
+modules-right = xbacklight pulseaudio wlan battery temperature date powermenu
+# bspwm filesystem xkeyboard cpu eth memory alsa
 
 tray-position = right
 tray-padding = 2
@@ -154,23 +153,27 @@ label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
+; label-focused = %index%
+label-focused = %{T2}%name%%{T-}
 label-focused-background = ${module/bspwm.label-focused-background}
 label-focused-underline = ${module/bspwm.label-focused-underline}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+; label-unfocused = %index%
+label-unfocused = %{T2}%name%%{T-}
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+; label-visible = %index%
+label-visible = %{T2}%name%%{T-}
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+; label-urgent = %index%
+label-urgent = %{T2}%name%%{T-}
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
@@ -195,7 +198,8 @@ label-song-ellipsis = true
 type = internal/xbacklight
 
 format = <label> <bar>
-label = BL
+; label = BL
+label = 
 
 bar-width = 10
 bar-indicator = |
@@ -289,7 +293,8 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+; label-volume = VOL %percentage%%
+label-volume = 
 label-volume-foreground = ${root.foreground}
 
 label-muted = 🔇 muted
@@ -316,21 +321,21 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume = 
+label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.foreground}
+bar-volume-foreground-2 = ${colors.foreground}
+bar-volume-foreground-3 = ${colors.foreground}
+bar-volume-foreground-4 = ${colors.foreground}
+bar-volume-foreground-5 = ${colors.foreground}
+bar-volume-foreground-6 = ${colors.primary}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
