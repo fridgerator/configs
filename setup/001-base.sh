@@ -12,6 +12,7 @@ google-chrome
 ttf-font-awesome
 neovim
 code
+gotop
 )
 
 ./setup/install-app.sh ${apps[*]}
