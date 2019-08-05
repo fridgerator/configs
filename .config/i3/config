@@ -172,6 +172,7 @@ bindsym $mod+r mode "resize"
 #}
 
 for_window [class=".*"] border pixel 0
+new_window 1pixel
 
 gaps inner 40
 # exec --no-startup-id "xrandr --output eDP1 --mode 2560x1440"

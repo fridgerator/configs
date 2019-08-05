@@ -13,6 +13,7 @@ ttf-font-awesome
 neovim
 code
 gotop
+dmenu
 )
 
 ./setup/install-app.sh ${apps[*]}

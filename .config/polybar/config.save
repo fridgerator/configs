@@ -57,7 +57,7 @@ font-2 = FontAwesome:pixelsize=14;0
 
 modules-left = i3
 # modules-center = mpd
-modules-center = # spotify
+modules-center = spotify
 modules-right = xbacklight pulseaudio wlan battery temperature date powermenu
 # bspwm filesystem xkeyboard cpu eth memory alsa
 
